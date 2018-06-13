@@ -124,11 +124,29 @@ namespace Recursos.Persona {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Fecha de Nacimiento.
+        /// </summary>
+        public static string nacimiento {
+            get {
+                return ResourceManager.GetString("nacimiento", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Nombre.
         /// </summary>
         public static string nombre {
             get {
                 return ResourceManager.GetString("nombre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Tarjeta de Credito.
+        /// </summary>
+        public static string tarjeta {
+            get {
+                return ResourceManager.GetString("tarjeta", resourceCulture);
             }
         }
     }

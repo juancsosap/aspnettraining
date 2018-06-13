@@ -106,6 +106,15 @@ namespace Recursos {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to El valor no es una Tarjeta de Credito valida.
+        /// </summary>
+        public static string error_cc {
+            get {
+                return ResourceManager.GetString("error_cc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to El campo debe coincidir con contenido del campo {1}.
         /// </summary>
         public static string error_comparar {

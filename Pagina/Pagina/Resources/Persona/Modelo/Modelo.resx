@@ -138,7 +138,13 @@
   <data name="emailval" xml:space="preserve">
     <value>Validación de Email</value>
   </data>
+  <data name="nacimiento" xml:space="preserve">
+    <value>Fecha de Nacimiento</value>
+  </data>
   <data name="nombre" xml:space="preserve">
     <value>Nombre</value>
+  </data>
+  <data name="tarjeta" xml:space="preserve">
+    <value>Tarjeta de Credito</value>
   </data>
 </root>

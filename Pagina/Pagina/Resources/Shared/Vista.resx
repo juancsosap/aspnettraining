@@ -132,6 +132,9 @@
   <data name="boton_volver" xml:space="preserve">
     <value>Volver</value>
   </data>
+  <data name="error_cc" xml:space="preserve">
+    <value>El valor no es una Tarjeta de Credito valida</value>
+  </data>
   <data name="error_comparar" xml:space="preserve">
     <value>El campo debe coincidir con contenido del campo {1}</value>
   </data>

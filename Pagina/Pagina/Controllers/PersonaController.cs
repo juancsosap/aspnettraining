@@ -10,7 +10,7 @@ namespace Pagina.Controllers
 {
     public class PersonaController : Controller
     {
-        private DAO<Persona> db = DAOMemoryPersona.getInstance();
+        private DAO<Persona> db = new DAOEF<Persona, AppDBContext>();
 
         /*public PersonaController(DAO<Persona> dao)
         {
@@ -91,6 +91,11 @@ namespace Pagina.Controllers
             }
         }
 
+        [ChildActionOnly]
+        public PartialViewResult _Volver()
+        {
+            return PartialView();
+        }
 
         public JsonResult Validador(int edad)
         {

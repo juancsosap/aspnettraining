@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -27,36 +28,28 @@ namespace Pagina.Models
         [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "edad")]
         public int edad { get; set; }
 
-        [Required(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_requerido")]
-        [EmailAddress(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_email")]
-        [DataType(DataType.EmailAddress)]
-        [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "email")]
-        public String email { get; set; }
-
-        [NotMapped]
-        [Required(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_requerido")]
-        [EmailAddress(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_email")]
-        [Compare("email", ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_comparar")]
-        [DataType(DataType.EmailAddress)]
-        [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "emailval")]
-        public String emailval { get; set; }
-
-        [Required(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_requerido")]
+        [DefaultValue("Chile")]
         [StringLength(500, MinimumLength = 20, ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_longitud")]
         [DataType(DataType.MultilineText)]
         [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "direccion")]
         public String direccion { get; set; }
 
         [Required(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_requerido")]
-        [DataType(DataType.Password)]
-        [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "contrasena")]
-        public String contrasena { get; set; }
+        [StringLength(20, MinimumLength = 8, ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_longitud")]
+        [DataType(DataType.CreditCard)]
+        [CreditCard(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_cc")]
+        [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "tarjeta")]
+        public String tarjeta { get; set; }
 
-        [NotMapped]
         [Required(ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_requerido")]
-        [Compare("contrasena", ErrorMessageResourceType = typeof(Recursos.Vista), ErrorMessageResourceName = "error_comparar")]
-        [DataType(DataType.Password)]
-        [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "contrasenaval")]
-        public String contrasenaval { get; set; }
+        [DataType(DataType.Date)]
+        [Display(ResourceType = typeof(Recursos.Persona.Modelo), Name = "nacimiento")]
+        public DateTime nacimiento { get; set; }
+
+        [ForeignKey("idUsuario")]
+        public int idUsuario { get; set; }
+
+        public Usuario usuario { get; set; }
+
     }
 }

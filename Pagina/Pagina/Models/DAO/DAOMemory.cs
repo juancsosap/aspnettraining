@@ -12,10 +12,10 @@ namespace Pagina.Models.DAO
 
         private DAOMemoryPersona()
         {
-            data.Add(new Persona() { id = 1, nombre = "Juan", apellido = "Perez", edad = 20, email = "juan@uai.cl", direccion = "Providencia" });
-            data.Add(new Persona() { id = 2, nombre = "José", apellido = "Lopez", edad = 30, email = "jose@uai.cl", direccion = "Providencia" });
-            data.Add(new Persona() { id = 3, nombre = "Luis", apellido = "Gutierrez", edad = 40, email = "luis@uai.cl", direccion = "Providencia" });
-            data.Add(new Persona() { id = 4, nombre = "Pepe", apellido = "Alvares", edad = 50, email = "pepe@uai.cl", direccion = "Providencia" });
+            data.Add(new Persona() { id = 1, nombre = "Juan", apellido = "Perez", edad = 20, email = "juan@uai.cl", direccion = "Providencia", tarjeta = "4770415897972386" });
+            data.Add(new Persona() { id = 2, nombre = "José", apellido = "Lopez", edad = 30, email = "jose@uai.cl", direccion = "Providencia", tarjeta = "4770415897972386" });
+            data.Add(new Persona() { id = 3, nombre = "Luis", apellido = "Gutierrez", edad = 40, email = "luis@uai.cl", direccion = "Providencia", tarjeta = "4770415897972386" });
+            data.Add(new Persona() { id = 4, nombre = "Pepe", apellido = "Alvares", edad = 50, email = "pepe@uai.cl", direccion = "Providencia", tarjeta = "4770415897972386" });
         }
 
         public static DAOMemoryPersona getInstance()
